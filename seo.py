@@ -62,7 +62,7 @@ class chatbot(discord.Client):
             embed.add_field(name='!롤', value='Ex) !롤 닉네임', inline=False)
             embed.add_field(name='!뉴비', value='초반 육성 및 알아야 할것들 ', inline=False)
             embed.add_field(name='!추천트리', value='각 클래스별 추천트리를 알려줌', inline=False)
-            embed.add_field(name='!(클래스명)', value='!소드맨, 아처, 위저드, 클레릭, 스카우트 등 상세트리를 알려줍니다', inline=False)
+            embed.add_field(name='!클래스명', value='Ex) !소드맨, 아처, 위저드, 클레릭, 스카우트 등 상세트리를 알려줍니다', inline=False)
             await message.channel.send(embed=embed)
             
         if message.content.startswith("!추천트리"):
@@ -83,10 +83,38 @@ class chatbot(discord.Client):
             embed.add_field(name="그냥 힐러, 몸빵",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
             await message.channel.send(embed=embed)
             
-
-
-
             
+        if message.content.startswith("!소드맨"):
+            embed=discord.Embed(title="소드맨", description="관련 트리들", color=#ff0000)
+            embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i16109921724.png")
+            embed.add_field(name="소드맨",value='http://www.inven.co.kr/board/tos/4195/117434', inline=False)
+            await message.channel.send(embed=embed)
+                                
+
+        if message.content.startswith("!아처"):
+            embed=discord.Embed(title="아처", description="관련 트리들", color=#008000)
+            embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i14292340797.png")
+            embed.add_field(name="아처",value='http://www.inven.co.kr/board/tos/4196/110092', inline=False)
+            await message.channel.send(embed=embed)
+                             
+        if message.content.startswith("!위저드"):
+            embed=discord.Embed(title="위저드", description="관련 트리들", color=#4B89DC)
+            embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15616546666.png")
+            embed.add_field(name="위저드",value='http://www.inven.co.kr/board/tos/4197/79587', inline=False)
+            await message.channel.send(embed=embed)   
+                                
+         if message.content.startswith("!클레릭"):
+            embed=discord.Embed(title="클레릭", description="관련 트리들", color= #ffff00)
+            embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i14556465698.png")
+            embed.add_field(name="클레릭",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
+            await message.channel.send(embed=embed)       
+                                 
+         if message.content.startswith("!스카우트"):
+            embed=discord.Embed(title="스카우트", description="관련 트리들", color= #ffff00)
+            embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15605273558.png")
+            embed.add_field(name="",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
+            await message.channel.send(embed=embed)                                
+                                
 
         if message.content.startswith('!롤'):
             channel = message.channel
