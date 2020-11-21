@@ -77,7 +77,6 @@ class chatbot(discord.Client):
             embed.add_field(name="그냥 힐러, 몸빵",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
             await message.channel.send(embed=embed)
             
-            
         if message.content.startswith("!소드맨"):
             embed=discord.Embed(title="소드맨", description="관련 트리들", color=0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i16109921724.png")
@@ -95,20 +94,22 @@ class chatbot(discord.Client):
             embed=discord.Embed(title="위저드", description="관련 트리들", color=0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15616546666.png")
             embed.add_field(name="위저드",value='http://www.inven.co.kr/board/tos/4197/79587', inline=False)
-            await message.channel.send(embed=embed)   
-                                
-         if message.content.startswith("!클레릭"):
+            await message.channel.send(embed=embed)
+
+            
+        if message.content.startswith("!클레릭"):
             embed=discord.Embed(title="클레릭", description="관련 트리들", color= 0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i14556465698.png")
             embed.add_field(name="클레릭",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
-            await message.channel.send(embed=embed)       
+            await message.channel.send(embed=embed)
+            
                                  
-         if message.content.startswith("!스카우트"):
+        if message.content.startswith("!스카우트"):
             embed=discord.Embed(title="스카우트", description="관련 트리들", color= 0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15605273558.png")
             embed.add_field(name="",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
-            await message.channel.send(embed=embed)                                
-                                
+            await message.channel.send(embed=embed)               
+                      
 
         if message.content.startswith('!롤'):
             channel = message.channel
