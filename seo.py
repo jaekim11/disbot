@@ -8,6 +8,7 @@ import asyncio
 from discord import Embed, Emoji
 from discord.utils import get
 from discord.ext import commands
+import os
 
 
 class chatbot(discord.Client):
@@ -169,7 +170,7 @@ class chatbot(discord.Client):
 
 
 
-
+access_token = os.environ['BOT_TOKEN']
 if __name__ == "__main__":
     client = chatbot()
-    client.run("NzE2MDMyODA4MDg2Mjc0MDg5.Xtx-Ng.bKOXgiZbpCtN48VZiP56ukg_P7g")
+    client.run(access_token)
