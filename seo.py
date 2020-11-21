@@ -107,7 +107,7 @@ class chatbot(discord.Client):
         if message.content.startswith("!스카우트"):
             embed=discord.Embed(title="스카우트", description="관련 트리들", color= 0xD08940)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15605273558.png")
-            embed.add_field(name="",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
+            embed.add_field(name="스카우트",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
             await message.channel.send(embed=embed)               
                       
 
