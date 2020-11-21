@@ -79,32 +79,32 @@ class chatbot(discord.Client):
             
             
         if message.content.startswith("!소드맨"):
-            embed=discord.Embed(title="소드맨", description="관련 트리들", color=0xff0000)
+            embed=discord.Embed(title="소드맨", description="관련 트리들", color=0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i16109921724.png")
             embed.add_field(name="소드맨",value='http://www.inven.co.kr/board/tos/4195/117434', inline=False)
             await message.channel.send(embed=embed)
                                 
 
         if message.content.startswith("!아처"):
-            embed=discord.Embed(title="아처", description="관련 트리들", color=0x008000)
+            embed=discord.Embed(title="아처", description="관련 트리들", color=0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i14292340797.png")
             embed.add_field(name="아처",value='http://www.inven.co.kr/board/tos/4196/110092', inline=False)
             await message.channel.send(embed=embed)
                              
         if message.content.startswith("!위저드"):
-            embed=discord.Embed(title="위저드", description="관련 트리들", color=0x4B89DC)
+            embed=discord.Embed(title="위저드", description="관련 트리들", color=0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15616546666.png")
             embed.add_field(name="위저드",value='http://www.inven.co.kr/board/tos/4197/79587', inline=False)
             await message.channel.send(embed=embed)   
                                 
          if message.content.startswith("!클레릭"):
-            embed=discord.Embed(title="클레릭", description="관련 트리들", color= 0xffff00)
+            embed=discord.Embed(title="클레릭", description="관련 트리들", color= 0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i14556465698.png")
             embed.add_field(name="클레릭",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
             await message.channel.send(embed=embed)       
                                  
          if message.content.startswith("!스카우트"):
-            embed=discord.Embed(title="스카우트", description="관련 트리들", color= 0xffff00)
+            embed=discord.Embed(title="스카우트", description="관련 트리들", color= 0x00ff56)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15605273558.png")
             embed.add_field(name="",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
             await message.channel.send(embed=embed)                                
