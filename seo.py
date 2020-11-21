@@ -42,13 +42,12 @@ class chatbot(discord.Client):
             embed.add_field(name="트오세 장비 관련 영상",value='https://www.youtube.com/watch?v=gBqd5MGRk7g&t=281s', inline=False)
             embed.add_field(name="트오세 돈벌이 관련 영상",value='https://www.youtube.com/watch?v=8c9_qVEKpMQ&feature=youtu.be', inline=False)
             embed.add_field(name="트오세 초보자 관렵 팁 모음",value='https://wolfy.tistory.com/145', inline=False)
+            embed.add_field(name="트오세 초반육성 관련 동영상",value='https://youtu.be/hHjW2UuYY9Y', inline=False)
             embed.add_field(name="트오세 초반육성 관련 [1]",value='http://www.inven.co.kr/board/tos/4185/14126', inline=False)
             embed.add_field(name="트오세 초반육성 관련 [2]",value='http://www.inven.co.kr/board/tos/4185/14129?my=chu', inline=False)
             embed.add_field(name="트오세 초반육성 관련 [3]",value='http://www.inven.co.kr/board/tos/4604/1827', inline=False)
             await message.channel.send(embed=embed)
 
-
-       
             
         if message.content.startswith("!명령어"):
             embed=discord.Embed(title="명령어 모음", description="명령해.", color=0x00ff56)
