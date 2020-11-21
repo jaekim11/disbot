@@ -60,7 +60,7 @@ class chatbot(discord.Client):
             embed.add_field(name="!시간",value='현재시간을 알려줍니다', inline=False)
             embed.add_field(name='!날씨', value='Ex) !날씨 대전복수동', inline=False)
             embed.add_field(name='!롤', value='Ex) !롤 닉네임', inline=False)
-            embed.add_field(name='!뉴비', value='초반 육성 및 ', inline=False)
+            embed.add_field(name='!뉴비', value='초반 육성 및 알아야 할것들 ', inline=False)
             embed.add_field(name='!추천트리', value='각 클래스별 추천트리를 알려줌', inline=False)
             embed.add_field(name='!(클래스명)', value='!소드맨, 아처, 위저드, 클레릭, 스카우트 등 상세트리를 알려줍니다', inline=False)
             await message.channel.send(embed=embed)
