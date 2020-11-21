@@ -24,10 +24,6 @@ class chatbot(discord.Client):
             return None
 
 
-
-
-
-
         if message.content == "!시간":
             channel = message.channel
             await channel.send(time.strftime("%Y년 %m월 %d일 %H시 %M분 %S초"))
@@ -38,9 +34,7 @@ class chatbot(discord.Client):
             await ctx.channel.purge(limit=amount)
             await channel.send("저는 고아입니다... 때리지 마세요")
 
-      
-            
-     
+
 
         if message.content.startswith("!뉴비"):
             embed=discord.Embed(title="트오세 완전 정복", description="배우자", color=0x00ff56)
