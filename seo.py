@@ -46,6 +46,9 @@ class chatbot(discord.Client):
             embed.add_field(name="트오세 초반육성 관련 [1]",value='http://www.inven.co.kr/board/tos/4185/14126', inline=False)
             embed.add_field(name="트오세 초반육성 관련 [2]",value='http://www.inven.co.kr/board/tos/4185/14129?my=chu', inline=False)
             embed.add_field(name="트오세 초반육성 관련 [3]",value='http://www.inven.co.kr/board/tos/4604/1827', inline=False)
+            embed.add_field(name="이벤트 참여할 것",value='http://tos.nexon.com/news/events/view.aspx?n4ArticleSN=288&n4ArticleCategorySN=1', inline=False)
+            embed.add_field(name="이벤트 참여할 것",value='http://tos.nexon.com/news/events/view.aspx?n4ArticleSN=288&n4ArticleCategorySN=1', inline=False)
+            embed.add_field(name="이벤트 참여할 것",value='http://tos.nexon.com/news/events/view.aspx?n4ArticleSN=288&n4ArticleCategorySN=1', inline=False)
             await message.channel.send(embed=embed)
 
             
