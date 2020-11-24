@@ -142,22 +142,6 @@ class chatbot(discord.Client):
                 await channel.send("소환사 닉네임이 없습니다")
 
                 
-        if message.content.startswith('!코로나'):
-            channel = message.channel
-            try:
-                op = requests.get("https://search.naver.com/search.naver?where=nexearch&sm=tab_jum&query=%EC%BD%94%EB%A1%9C%EB%82%98")
-                source = op.text
-                op1 = BeautifulSoup(op.content,"html.parser")
-                a = op1.find_all("p", {"class":"info_num"}) 
-                embed=discord.Embed(title="코로나 검색", description=name, color=0x00ff56)
-                embed.set_thumbnail(url="https://w.namu.la/s/96cbee29f18723c5ef087892747e76ac6c1a76b470394e708f629d26ef7abc43586f2168c1da854f0dd022d614ec14968c101aebeb2e1870b81a42f0083f4e46288373a3d336fe6d7d72a05e36fb91c7eb584161406b47a689f68b867be479e6e5b18e2c4c7f7901d0dc63cfd3fe824f")
-                embed.add_field(name="코로나 확진환자 ",a[0].get_text(), inline=False)
-                await message.channel.send(embed=embed)
-            except:
-                await channel.send("소환사 닉네임이 없습니다")
-                
-
-
                 
         if message.content.startswith('!날씨'):
             channel = message.channel
