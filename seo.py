@@ -37,17 +37,16 @@ class chatbot(discord.Client):
         if message.content.startswith('!코로나'):
             channel = message.channel
             try:
-                name = message.content[3:len(message.content)]
                 korona = requests.get("https://search.naver.com/search.naver?where=nexearch&sm=tab_jum&query=%EC%BD%94%EB%A1%9C%EB%82%98")
                 source = korona.text
                 korona1 = BeautifulSoup(korona.content,"html.parser")
                 a = korona1.find_all("p", {"class":"info_num"})
                 embed=discord.Embed(title="코로나 현황", description=name, color=0x00ff56)
                 embed.set_thumbnail(url="https://w.namu.la/s/bdbf10384de7b8ed8ec6e37309f0379fed9326e7745574402355758a9dc69a54696067695ff26933e85e03663b364a2c92278d26ef4d8b63b33c730724e92510fd12b9a001f3f7806da913949ecc5991b42894ddd58e90858d0d12f8be124376edb54924521150dbc1bc9e695f9ced31")
-                embed.add_field(name="코로나 확진 환자",value=a[0].get_text(), inline=False)
-                embed.add_field(name="검사중",value=a[1].get_text(), inline=False)
-                embed.add_field(name="격리 해제",value=a[2].get_text(), inline=False)
-                embed.add_field(name="사망자 수",value=a[3].get_text(), inline=False)
+                embed.add_field(name="코로나 확진 환자",value=a[0].get_text()+"명", inline=False)
+                embed.add_field(name="검사중",value=a[1].get_text()+"명", inline=False)
+                embed.add_field(name="격리 해제",value=a[2].get_text()+"명", inline=False)
+                embed.add_field(name="사망자 수",value=a[3].get_text()+"명", inline=False)
                 await message.channel.send(embed=embed)
             except:
                 await channel.send("소환사 닉네임이 없습니다")
@@ -96,6 +95,7 @@ class chatbot(discord.Client):
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2019/06/13/bbs/i15563194980.gif")
             embed.add_field(name="그냥 힐러, 몸빵",value='http://www.inven.co.kr/board/tos/4198/60840', inline=False)
             await message.channel.send(embed=embed)
+            
             
         if message.content.startswith("!소드맨"):
             embed=discord.Embed(title="소드맨", description="관련 트리들", color=0xCC0000)
