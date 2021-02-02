@@ -70,8 +70,8 @@ class chatbot(discord.Client):
             
         if message.content.startswith("!명령어"):
             embed=discord.Embed(title="명령어 모음", description="명령해.", color=0x00ff56)
-            embed.add_field(name='!문규호', value='현재 코로나 상황', inline=False)
-            embed.add_field(name='!문규호', value='현재 코로나 상황', inline=False)
+            embed.add_field(name='!문규호', value='문규호의 정보', inline=False)
+            embed.add_field(name='!정보', value='디스코드 봇 ', inline=False)
             embed.add_field(name="!시간",value='현재시간을 알려줍니다', inline=False)
             embed.add_field(name='!날씨', value='Ex) !날씨 대전복수동', inline=False)
             embed.add_field(name='!롤', value='Ex) !롤 닉네임', inline=False)
