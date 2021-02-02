@@ -14,7 +14,7 @@ import os
 class chatbot(discord.Client):
    
     async def on_ready(self):
-        game = discord.Game("빡대가리라 공부")
+        game = discord.Game("거울 봐서 거울 깨트림")
         await client.change_presence(status=discord.Status.online, activity=game)
         print("READY")
 
@@ -28,11 +28,9 @@ class chatbot(discord.Client):
             channel = message.channel
             await channel.send(time.strftime("%Y년 %m월 %d일 %H시 %M분 %S초"))
             
-        if message.content == "!이승환":
+        if message.content == "!문규호":
             channel = message.channel
-            
-            await ctx.channel.purge(limit=amount)
-            await channel.send("저는 고아입니다... 때리지 마세요")
+            await channel.send("98년생 1월23일생 여자친구 있음, 돈 없음, 뇌 없음")
             
 
 
