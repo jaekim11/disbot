@@ -14,7 +14,7 @@ import os
 class chatbot(discord.Client):
    
     async def on_ready(self):
-        game = discord.Game("거울 봐서 거울 깨트림")
+        game = discord.Game("미미짱 옷 입히기 게임")
         await client.change_presence(status=discord.Status.online, activity=game)
         print("READY")
 
@@ -30,8 +30,11 @@ class chatbot(discord.Client):
             
         if message.content == "!문규호":
             channel = message.channel
-            await channel.send("98년생 1월23일생 여자친구 있음, 돈 없음, 뇌 없음")
+            await channel.send("98년생 1월23일생 24살 여자친구 있음 (유일한 업적), 돈 없음, 뇌 없음, 지건 가능")
             
+        if message.content == "!정보":
+            channel = message.channel
+            await channel.send("98년생 1월23일생 24살 문규호를 모티브로 만듬 \n사용한 언어 파이썬, 소스 225줄")            
 
 
         if message.content.startswith("!코로나"):
@@ -67,6 +70,8 @@ class chatbot(discord.Client):
             
         if message.content.startswith("!명령어"):
             embed=discord.Embed(title="명령어 모음", description="명령해.", color=0x00ff56)
+            embed.add_field(name='!문규호', value='현재 코로나 상황', inline=False)
+            embed.add_field(name='!문규호', value='현재 코로나 상황', inline=False)
             embed.add_field(name="!시간",value='현재시간을 알려줍니다', inline=False)
             embed.add_field(name='!날씨', value='Ex) !날씨 대전복수동', inline=False)
             embed.add_field(name='!롤', value='Ex) !롤 닉네임', inline=False)
