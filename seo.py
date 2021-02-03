@@ -144,17 +144,17 @@ class chatbot(discord.Client):
                 lossee = op1.find_all("span", {"class":"losses"})
                 winratio = op1.find_all("span", {"class":"winratio"})
                 most = op1.find_all("div", {"class":"ChampionName"})
-                lol = '티어: '+rank[0].text+'\n점수: '+lp[0].text.strip()+'\n승: '+wins[0].text+'\n패: '+lossee[0].text+'\n승률: '+winratio[0].text[10:]
-                embed=discord.Embed(title="롤 전적 검색", description=name, color=0x00ff56)
-                embed.set_thumbnail(url="https://opgg-static.akamaized.net/images/medals/"+rank[0].text[:-2]+"_"+rank[0].text[-1:]+".png?image=q_auto&v=1")
-                embed.add_field(name="티어",value=rank[0].text, inline=False)
-                
-                embed.add_field(name="점수",value=lp[0].text.strip(), inline=False)
-                
-                embed.add_field(name="승 \\ 패 \\ 승률",value=wins[0].text+" \a " +lossee[0].text+ " \a " + winratio[0].text[10:], inline=False)
-                embed.add_field(name="most champions 3",value="a", inline=False)
-                
-                await message.channel.send(embed=embed)
+                if lp == "[]":
+                     await channel.send("언랭크는 전적 검색이 안됩니다")
+                else:
+                  lol = '티어: '+rank[0].text+'\n점수: '+lp[0].text.strip()+'\n승: '+wins[0].text+'\n패: '+lossee[0].text+'\n승률: '+winratio[0].text[10:]
+                  embed=discord.Embed(title="롤 전적 검색", description=name, color=0x00ff56)
+                  mbed.set_thumbnail(url="https://opgg-static.akamaized.net/images/medals/"+rank[0].text[:-2]+"_"+rank[0].text[-1:]+".png?image=q_auto&v=1")
+                  embed.add_field(name="티어",value=rank[0].text, inline=False)
+                  embed.add_field(name="점수",value=lp[0].text.strip(), inline=False)
+                  embed.add_field(name="승 \\ 패 \\ 승률",value=wins[0].text+" \a " +lossee[0].text+ " \a " + winratio[0].text[10:], inline=False)
+                  embed.add_field(name="most champions 3",value="a", inline=False)
+                  await message.channel.send(embed=embed)
             except:
                 await channel.send("소환사 닉네임이 없습니다")
 
