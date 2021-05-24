@@ -128,8 +128,13 @@ class chatbot(discord.Client):
             embed=discord.Embed(title="스카우트", description="관련 트리들", color= 0xD08940)
             embed.set_thumbnail(url="https://optimal.inven.co.kr/upload/2018/12/27/bbs/i15605273558.png")
             embed.add_field(name="스카우트",value='http://www.inven.co.kr/board/tos/5360/815', inline=False)
-            await message.channel.send(embed=embed)               
-                      
+            await message.channel.send(embed=embed)
+            
+        if message.content.startswith("!클레"):
+            embed=discord.Embed(title="클레", description="클레 가이드", color=0xCC0000)
+            embed.set_thumbnail(url="https://ac.namu.la/20210430/f640d2accbd89a2092380944a6ed4cbaa843e4ccf6db04c586fd645e5fe0ffde.png")
+            embed.add_field(name="클레",value='https://arca.live/b/genshin/24956371', inline=False)
+            await message.channel.send(embed=embed)                      
 
         if message.content.startswith('!롤'):
             channel = message.channel
