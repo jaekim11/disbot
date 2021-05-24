@@ -139,7 +139,7 @@ class chatbot(discord.Client):
         if message.content.startswith("!호두"):
             embed=discord.Embed(title="호두", description="호두 가이드", color=0xCC0000)
             embed.set_thumbnail(url="https://ac.namu.la/20210430/3ea68dfbe2fc1b640db93fcc40a1646cfa4ab0abff25f6526b54bb8f25140696.png")
-            embed.add_field(name="호두 관련 ",value='https://arca.live/b/genshin/24956857', inline=False)
+            embed.add_field(name="호두 관련 정보 ",value='https://arca.live/b/genshin/24956857', inline=False)
             await message.channel.send(embed=embed)
             
         if message.content.startswith('!롤'):
